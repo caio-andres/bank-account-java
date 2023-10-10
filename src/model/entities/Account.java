@@ -51,13 +51,13 @@ public class Account {
 
 	public void withdraw(double amount) throws Exception {
 		if (amount > withdrawLimit && amount > balance) {
-			throw new Exception("The amount exceeds withdraw limit and the account's balance.");
+			throw new Exception("The amount exceeds withdraw limit and the account's balance. (A quantia atingiu o limite de saque e o saldo da conta).");
 		}
 		if (amount > withdrawLimit) {
-			throw new Exception("The amount exceeds withdraw limit.");
+			throw new Exception("The amount exceeds withdraw limit. (A quantia atingiu o limite de saque).");
 		}
 		if (amount > balance) {
-			throw new Exception("Not enough balance.");
+			throw new Exception("Not enough balance. (Sem saldo suficiente).");
 		}
 		balance -= amount;
 	}
